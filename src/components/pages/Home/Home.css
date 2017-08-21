@@ -1,0 +1,14 @@
+.Home {
+  text-align: center;
+  background-color: #fff;
+}
+
+.Home-header {
+  height: 150px;
+  padding: 20px;
+  color: #000;
+}
+
+.Home-body {
+  font-size: large;
+}
