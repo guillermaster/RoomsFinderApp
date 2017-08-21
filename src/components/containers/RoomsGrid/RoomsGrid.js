@@ -10,10 +10,14 @@ class RoomsGrid extends Component {
   }
 
   roomsGrid(){
+
     const roomsHtml = this.state.rooms.map((room, idx) =>
       <RoomBox key={idx}
         name={room.name}
         description={room.description}
+        amenities={room.amenities}
+        upgradedFacilities={room.upgradedFacilities}
+        bathrooms={room.bathrooms}
         />
     );
 
