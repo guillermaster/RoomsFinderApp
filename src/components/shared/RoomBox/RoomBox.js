@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import aircon from './icons/aircon.svg';
+import appletv from './icons/appletv.svg';
+import btspeakers from './icons/btspeakers.svg';
+import cardkey from './icons/cardkey.svg';
+import chromecast from './icons/chromecast.svg';
+import fireplace from './icons/fireplace.svg';
+import hdtv from './icons/hdtv.svg';
+import jacuzzi from './icons/jacuzzi.svg';
+import nespresso from './icons/nespresso.svg';
+import './RoomBox.css';
 
 const yes = "Yes";
 const no = "No";
@@ -56,6 +66,83 @@ class RoomBox extends Component {
             {this.props.bathrooms}
           </div>
         </div>
+        <div className="row">
+          <div className="col-md-12">
+            Amenities:
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-1">
+            <img src={aircon} className="logo" alt="Air conditioner" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.aircon ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={appletv} className="logo" alt="Apple TV" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.appletv ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={btspeakers} className="logo" alt="Bluetooth speakers" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.btspeakers ? yes : no }
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-1">
+            <img src={cardkey} className="logo" alt="Card Key" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.cardkey ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={chromecast} className="logo" alt="Chromecast" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.chromecast ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={fireplace} className="logo" alt="Fire place" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.fireplace ? yes : no }
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-1">
+            <img src={hdtv} className="logo" alt="HD TV" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.hdtv ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={jacuzzi} className="logo" alt="Jacuzzi" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.jacuzzi ? yes : no }
+          </div>
+          <div className="col-md-1">
+          </div>
+          <div className="col-md-1">
+            <img src={nespresso} className="logo" alt="Espresso coffee maker" />
+          </div>
+          <div className="col-md-1">
+          { this.props.amenities.nespresso ? yes : no }
+          </div>
+        </div>
       </div>
     );
   }
@@ -64,7 +151,7 @@ class RoomBox extends Component {
   render() {
     let footerButtonIcon = this.state.showFull ?
           "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down";
-    let minHeight = this.state.showFull ? '200px' : '120px';
+    let minHeight = this.state.showFull ? '200px' : '150px';
 
     return (
       <div className="col-sm-6 col-md-3 col-xl-2">
