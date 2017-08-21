@@ -32,7 +32,8 @@ class RoomsGrid extends Component {
 
   filterRooms(rooms, filter){
     let filteredRooms = rooms.filter((room) => {
-      return room.name.includes(filter) || room.description.includes(filter)
+      return room.name.toLowerCase().includes(filter.toLowerCase()) ||
+             room.description.toLowerCase().includes(filter.toLowerCase())
     });
 
     return filteredRooms;
