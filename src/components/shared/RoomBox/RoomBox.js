@@ -42,11 +42,11 @@ class RoomBox extends Component {
 
   renderUpgradedFacilities(){
     let upgradedFacilities = this.props.upgradedFacilities ?
-      "It has Upgraded facilities!" : " ";
+      "with upgraded facilities!" : " ";
 
     return (
-      <div className="row" style={{textAlign: 'right', fontSize: '70%'}}>
-        <div className="col-md-12">
+      <div className="row" style={{fontSize: '65%'}}>
+        <div className="col-md-6" style={{backgroundColor: '#ffff00'}}>
           <strong>{upgradedFacilities}</strong>
         </div>
       </div>
